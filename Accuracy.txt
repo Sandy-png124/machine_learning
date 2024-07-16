@@ -1,0 +1,12 @@
+CO2 Emission Rating by Vehicles Using Data Science
+
+Algorithm / Model Used: Random Forest Classifier
+
+Accuracy Train score: 100% and test score: 99%
+
+Algorithm / Model Used: DecisionTreeClassifier
+
+Accuracy Train score: 100% and test score: 98%
+
+dataset: https://www.kaggle.com/datasets/rinichristy/2022-fuel-consumption-ratings
+

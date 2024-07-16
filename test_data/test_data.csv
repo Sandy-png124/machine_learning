@@ -1,0 +1,9 @@
+Make,Vehicle Class,Engine Size(L),Cylinders,Transmission,Fuel Type,Fuel Consumption (City (L/100 km),Fuel Consumption(Hwy (L/100 km)),Fuel Consumption(Comb (L/100 km)),Fuel Consumption(Comb (mpg)),CO2 Rating
+Acura,Compact,2.4,4,AM8,Z,9.9,7,8.6,33,6
+Ford,SUV: Small,2.5,4,AV,X,5.4,6.3,5.8,49,8
+Ford,SUV: Small,2.3,4,M7,X,13.8,12.4,13.2,21,3
+Genesis,SUV: Small,3.5,6,AS8,Z,12.9,10,11.6,24,4
+Hyundai,Full-size,1.6,4,AM6,X,4,3.9,4,71,10
+Jeep,SUV: Standard,5.7,8,A8,X,15.6,11.7,13.8,20,3
+Lexus,Compact,2,4,AV6,X,5.7,6.2,6,47,8
+Lincoln,SUV: Standard,3,6,AS10,X,13.7,9.7,11.9,24,4

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>CO2 Emission Rating by Vehicles Using Data 
+    Science</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../static/css/prediction.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+  <style>
+            
+                  
+            
+    h1 {
+        color:#141313;
+    }
+    td{
+color: #f321f3;
+}
+</style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+           
+          
+          <h3>
+                   
+            <span>
+              CO2 Emission 
+            </span>
+          </h3>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('index')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('login')}}">Login </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('upload')}}">Upload </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('prediction')}}">Prediction </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('performance')}}">performance_analysis </a>
+                </li>
+              </ul>
+          
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <div>
+                      <h1>
+                   
+                        <span>
+                          CO2 Emission Detection
+                        </span>
+                      </h1>
+                      <p>
+                        CO2 Prediction
+                      </p>
+                      <div class="btn-box">
+                         
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  
+  <!-- end about section -->
+  <div class="body_bg layout_padding">
+
+    <!-- service section -->
+
+    <section class="service_section ">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            CO2 Prediction
+          </h2>
+        </div>
+      </div>
+        <form action="{{ url_for('predict')}}" method="POST">
+		<div class="section-title">
+ 
+ 
+        </div>
+            <div class="scrollable">
+			
+               <center>     <table> </center> 
+				<tbody>
+                    
+						 
+					   <td>MAKE:</td>
+                        <td>
+                            <select type="text" name="make" method="post" required="required" placeholder="make" width="200" style="width: 200px">
+                               
+							       <option value="0">Acura</option>
+						         <option value="1">Alfa Romeo</option> 
+							       <option value="2">Aston Martin</option>
+						         <option value="3">Audi</option> 
+                     <option value="4">Bentley</option>
+						         <option value="5">BMW</option> 
+                     <option value="6">Buick</option>
+						         <option value="7">Cadillac</option> 
+                     <option value="8">Chevrolet</option>
+						         <option value="9">Chrysler</option> 
+							       <option value="10">Dodge</option>
+						         <option value="11">Ford</option> 
+							       <option value="12">Genesis</option>
+						         <option value="13">GMC</option> 
+                     <option value="14">Honda</option>
+						         <option value="15">Hyundai</option> 
+                     <option value="16">Infiniti</option>
+						         <option value="17">Jaguar</option> 
+                     <option value="18">Jeep</option>
+						         <option value="19">Kia</option> 
+                      <option value="20">Land Rover</option>
+						         <option value="21">Lexus</option> 
+							       <option value="22">Lincoln</option>
+						         <option value="23">Maserati</option> 
+                     <option value="24">Mercedes-Benz</option>
+						         <option value="25">Nissan</option> 
+                     <option value="26">Porsche</option>
+						         <option value="27">Ram</option> 
+                     <option value="28">Subaru</option>
+						         <option value="29">Toyota</option> 
+                      <option value="30">Volkswagen</option>
+						         <option value="31">Mazda</option> 
+							       <option value="32">MINI</option>
+						         <option value="33">Mitsubishi</option> 
+                     <option value="34">Volvo</option>
+						         <option value="35">Lamborghini</option> 
+                     <option value="36">Rolls-Royce</option>
+						         <option value="37">Bugatti</option> 
+                     <option value="38">FIAT</option>
+						         
+						       
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+                        <td>Vehicle Class:</td>
+                        <td>
+                            <select type="text" name="Vehicle_Class" method="post" required="required" placeholder="Vehicle Class" width="200" style="width: 200px">
+                               
+							       <option value="0">SUV: Small</option>
+						         <option value="1">Compact</option> 
+							       <option value="2">Mid-size</option>
+						         <option value="3">Minicompact</option> 
+                     <option value="4">Two-seate</option>
+						         <option value="5">SUV: Standard</option> 
+                     <option value="6">Subcompact</option>
+						         <option value="7">Full-size</option> 
+                     <option value="8">Pickup truck: Small</option>
+						         <option value="9">Pickup truck: Standard</option> 
+							       <option value="10">Minivan</option>
+						         <option value="11">Station wagon: Small</option> 
+							       <option value="12">Station wagon: Mid-size</option>
+						         <option value="13">Special purpose vehicle</option> 
+                    
+						         
+						       
+							   
+							   
+							   
+							   
+                            </select>
+                        </td>
+						
+						
+						 </tbody>
+                    <!-- Row 1 -->
+                    <tbody>
+                         <td> Engine Size(L):</td>
+                        <td>
+                            <input type="text" name="Engine_Size" method="post" required="required" placeholder="Engine Size(L)" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+						
+						   <td>Cylinders:</td>
+                        <td>
+                            <input type="text" name="Cylinders" method="post" required="required" placeholder="Cylinders" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+						
+                    </tbody>
+					
+                    <!-- Row 2 -->
+                    <tbody>
+                        <td>Transmission:</td>
+                        <td>
+                            <select type="text" name="Transmission" method="post" required="required" placeholder="Transmission" width="200" style="width: 200px">
+                               
+                              <option value="0">AM8</option>
+                              <option value="1">AS10</option> 
+                              <option value="2">A8</option>
+                              <option value="3">A9</option> 
+                              <option value="4">AM7</option>
+                              <option value="5">AS8</option> 
+                              <option value="6">M6</option>
+                              <option value="7">AS6</option> 
+                              <option value="8">AV</option>
+                              <option value="9">AS9</option> 
+                              <option value="10">A10</option>
+                              <option value="11">A6</option> 
+                              <option value="12">M5</option>
+                              <option value="13">M7</option> 
+                              <option value="14">AV7</option>
+                              <option value="15">AV1</option> 
+                              <option value="16">AM6</option>
+                              <option value="17">AS7</option> 
+                              <option value="18">AV8</option>
+                              <option value="19">AV6</option> 
+                               <option value="20">AV10</option>
+                              <option value="21">AS5</option> 
+                              <option value="22">A7</option>
+					
+                            </select>
+                        </td>
+                        <td>Fuel Type:</td>
+                        <td>
+                            <select type="text" name="Fuel_Type" method="post" required="required" placeholder="Fuel Type" width="200" style="width: 200px">
+                                    <option value="0">Z = premium gasoline</option>
+						                        <option value="1">X = regular gasoline </option> 
+						                        <option value="2">D = diesel</option>
+						                        <option value="3">D = diesel</option> 
+   
+								 
+                            </select>
+                        </td>
+                    </tbody>
+					
+                 
+                    <!-- Row 4 --></br>
+                    <tbody>
+                        <td>Fuel Consumption (City (L/100 km):</td>
+                        <td>
+                            <input type="text" name="Fuel_Consumption_City" method="post" required="required" placeholder="Fuel Consumption (City (L/100 km)" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+						
+						   <td>Fuel Consumption(Hwy (L/100 km)):</td>
+                        <td>
+                            <input type="text" name="Fuel_Consumption_Hwy" method="post" required="required" placeholder="Fuel Consumption(Hwy (L/100 km))" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+                    </tbody>
+                    <!-- Row 5 -->
+                    <tbody>
+                        <td> Fuel Consumption(Comb (L/100 km):</td>
+                        <td>
+                            <input type="text" name="Fuel_Consumption_comb" method="post" required="required" placeholder="Fuel Consumption(Comb (L/100 km)" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+						
+						   <td> Fuel Consumption(Comb (mpg)):</td>
+                        <td>
+                            <input type="text" name="Fuel_Consumption_comb_mpg" method="post" required="required" placeholder="Fuel_Consumption_comb_mpg" width="200" style="width: 200px"/>
+                                 
+							    
+						       
+                        </td>
+                        </tbody>
+                         
+                    <td>Model:</td>
+                    <td>
+                        <select type="text" name="Model" method="post" required="required" placeholder="Model" width="200" style="width: 200px">
+                           
+                 <option value="RandomForestClassifier">RandomForestClassifier</option>
+                 <option value="DecisionTreeClassifier">DecisionTreeClassifier</option> 
+           
+                 
+               
+             
+             
+             
+             
+                        </select>
+                    </td>
+        
+                  
+        
+        
+         </tbody> 
+
+					
+                </table>
+				</br>
+				</br>
+                <div class="center">
+                  <center>  <button type="submit" class="btn btn-primary ">Predict</button> </center> 
+                </div>
+            </div>
+        </form>
+        <br>
+        <br>
+        <center>
+        <h1>Model:{{ model }}</h1>
+        <h1>CO2 rating is:{{ result_prediction }}</h1>
+		    <h1>CO2:{{ prediction_text }}</h1>
+		   
+		   </center>
+
+
+
+
+      </div>
+    </section>
+
+    <!-- end service section -->
+
+    <!-- quote section -->
+
+    
+
+    <!-- end client section -->
+
+  </div>
+  <!-- info section -->
+
+  <!-- <section class="info_section layout_padding">
+    <div class="footer_contact">
+      <div class="heading_container">
+        <h2>
+          Contact Us
+        </h2>
+      </div>
+      
+    </div>
+
+
+  </section> -->
+
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+   
+  <!-- footer section -->
+
+  <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+
+</body>
+
+</html>
